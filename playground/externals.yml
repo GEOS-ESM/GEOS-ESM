@@ -1,0 +1,35 @@
+Components:
+  ESMA_env:
+    remote: git@github.com:GEOS-ESM/ESMA_env.git
+    tag: v1.4.0
+    local: ./@env
+  ESMA_cmake:
+    remote: git@github.com:GEOS-ESM/ESMA_cmake.git
+    tag: v1.0.10
+    local: ./@cmake
+    Components:
+      ecbuild:
+        branch: feature/FindMKL-portability-improvement
+        local: ./@cmake/@ecbuild
+        remote: git@github.com:GEOS-ESM/ecbuild.git
+  FMS:
+    remote: git@github.com:GEOS-ESM/FMS.git
+    tag: geos/orphan/v1.0.2
+    local: ./src/Shared/@FMS
+  FVdycoreCubed_GridComp:
+    remote: git@github.com:GEOS-ESM/FVdycoreCubed_GridComp.git
+    tag: v1.0.7
+    local: ./src/Components/@FVdycoreCubed_GridComp
+    Components:
+      fvdycore:
+        remote: git@github.com:GEOS-ESM/GFDL_atmos_cubed_sphere.git
+        tag: geos/v1.0.2
+        local: ./src/Components/@FVdycoreCubed_GridComp/@fvdycore
+  GMAO_Shared:
+    remote: git@github.com:GEOS-ESM/GMAO_Shared.git
+    tag: v1.0.12
+    local: ./src/Shared/@GMAO_Shared
+  MAPL:
+    remote: git@github.com:GEOS-ESM/MAPL.git
+    tag: v1.1.9
+    local: ./src/Shared/@MAPL
